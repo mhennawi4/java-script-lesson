@@ -1,10 +1,6 @@
-//console.log("Did you change my file name?");
-console.log("You made it to the console!");
-
+console.log("Did you change my file name?")
 let stop = false;
-
 function testNaN (number) {
-
   if ( isNaN (number) ) {
     stop = true;
     return "Type a real number"
@@ -39,6 +35,7 @@ function checkboxes() {
     document.getElementById('checkbox3_answer').innerHTML = "Answer?";
   }
 }
+
 
 function main() {
 

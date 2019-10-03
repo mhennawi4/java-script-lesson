@@ -4,22 +4,101 @@
 
     <noscript><h1 style="color:red;">JavaScript needs to be enabled in Settings</h1></noscript>
     <meta charset="utf-8">
-    <meta name="author" content="Mark Mercer">
+    <meta name="author" content="mahmoud hennawi">
     <meta name="description" content="JavaScript Assignemnts, output to console">
     <meta name="keywords" content="JavaScript, Console">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>I'm Learning Javacript</title>
+
+    <style>
+
+      div {border: thin dotted red;}
+    </style>
+
   </head>
 
   <body>
 
-    <header><h1>Ordering Grades</h1></header>
+    <header><h1>Ordering Grades Assignmnet</h1></header>
     <nav></nav>
-    <aside></aside>
-    <section><article></<article></article></section>
+    <div>
+      <aside>Notes about this assignment:
+        <ul style="list-style-type:square">
+          <li>65%: ordering numbers, like example
+          <li>80%: ordering four numbers
+          <li>90%: ordering five numbers with different algorithm or code than WHILE & IF from example
+          <li>100%: user input for amount of numbers to be ordered, then ordering correctly
+          <li><font color="black"><strong>BOUNS: finding 3 measures of central tendancy after numbers ordered, outputted to console and inner HTML (mean, median, and mode)</strong></font>
+          <li>BOUNS: user input to choose smallest to largest or largest to smallest
+        </ul>
+      </aside>
+    </div>
 
-      <script src="../scripts/orderinggrades.js"></script>
+    <section>
+      <article>
+
+        <form action="x.html" method="post" onsubmit="event.preventDefault();">
+
+
+        <p>&nbsp;</p>
+
+
+        <a><strong>Enter three random grades below, to be ordered smallest to largest ...</strong></a>
+
+        <p>
+          <label for="textfield">Grade #1: </label>
+          <input name="textfield1" type="text" id="textfield1">
+            <a id="validityTest1">See the Alert</a>
+        </p>
+
+        <p>
+          <label for="textfield2">Grade #2: </label>
+          <input name="textfield2" type="text" id="textfield2">
+            <a id="validityTest2">See the Alert</a>
+        </p>
+
+        <p>
+          <label for="textfield">Grade #3: </label>
+          <input name="textfield3" type="text" id="textfield3">
+            <a id="validityTest3">See the Alert</a>
+        </p>
+
+
+        <br>
+        <button type="button" onclick="main()">Submit</button>
+        <br>
+        <h3><a id="answer">What is the answer?</a></h3>
+        <br><br>
+
+
+          <legend>Case Study</legend>
+
+          <div>
+            <button type="button" onclick="checkboxes()">Submit</button>
+            <br><br>
+            <label>
+              <input type="checkbox" name="Checkbox1" nalue="checkbox1" id="Checkbox1">
+              <a>Is 50% greater than 60%: </a><a id="checkbox1_answer">Answer?</a>
+            </label>
+            <br>
+            <label>
+              <input type="checkbox" name="Checkbox2" nalue="checkbox2" id="Checkbox2">
+              <a>Is 70% < 65%: </a><a id="checkbox2_answer">Answer?</a>
+            </label>
+            <br>
+            <label>
+              <input type="checkbox" name="Checkbox3" nalue="checkbox3" id="Checkbox3">
+              <a>Is 95% < 95%: </a><a id="checkbox3_answer">Answer?</a>
+            </label>
+        </fieldset>
+
+      </article>
+    </section>
+
+    <br><br>
+
+    <script src="../scripts/OrderingGrades.js"></script>
 
   </body>
 
