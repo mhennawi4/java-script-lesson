@@ -2,18 +2,19 @@
 <html lang="en" dir="ltr">
   <head>
 
-    <noscript><h1 style="color:red;">JavaScript needs to be enabled in Settings</h1></noscript>
+    <noscript><h1 style="color:red;">JavaScript needs to be enabled in Settings</h1></noscript> <!-- Checks browser settings for JavaScript -->
+
     <meta charset="utf-8">
-    <meta name="author" content="Mark Mercer">
-    <meta name="description" content="JavaScript Assignemnts, output to console">
-    <meta name="keywords" content="JavaScript, Console">
+    <meta name="author" content="mahmoud hennawi">
+    <meta name="description" content="JavaScript Assignemnts, output to console"> <!-- Webpage Description to poplulate search engines like Google-->
+    <meta name="keywords" content="JavaScript, Console"> <!-- Key words for searching -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>I'm Learning Javacript</title>
   </head>
 
   <body>
-    <header><h1>Assignment</h1></header>
+    <header><h1>Demerit Points</h1></header>
     <nav></nav>
     <aside></aside>
 
@@ -28,13 +29,15 @@
 
       <a><strong>Enter the values  ...</strong></a>
       <p>
-        <label for="textfield">Name: </label>
+        <label for="textfield">Speed Limit: </label>
         <input name="textfield1" type="text" id="textfield1">
         <a id="validityTest1">"See the Alert", Inner HTML</a>
+        <br>
+        <a>Note: if nothing entered, speed limit will be <strong>70 km/h</strong></a>
       </p>
 
       <p>
-        <label for="textfield2">Name: </label>
+        <label for="textfield2">Speed for demerit calculation: </label>
         <input name="textfield2" type="text" id="textfield2">
         <a id="validityTest2">See the Alert</a>
       </p>
@@ -43,7 +46,13 @@
       <br>
       <button type="button" onclick="main()">Submit</button>
       <br>
-      <h3>Explanation, then, <a id="answer">Inner HTML</a></h3>
+      <h3>
+        <a>Speed limit entered is </a><a id="speedLimit">70 km/h</a>
+        <br>
+        <a>Speed Entered Above is </a><a id="speed">...</a>
+        <br>
+        <a id="answer">for ___ Demerit Points</a>
+      </h3>
       <br><br><br>
 
       <!-- Exemplar illstrating what this page does -->
@@ -77,8 +86,7 @@
 
     <br><br><br>
 
-    <!-- script src="directory pathway"></script -->
-    <script src="../scripts/template.js"></script>
+      <script src="..\scripts\demeritpoints.js"></script>
 
   </body>
 
