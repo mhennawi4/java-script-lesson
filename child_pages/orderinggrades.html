@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <body style="background-color: #bdffd1;">
+    </body>
+    <img src="3-2.jpg" alt="grades" align="right">
+    <body>
 
-<body style="background-color#ffbff6;">
-</body>
+
+    </body>
     <noscript><h1 style="color:red;">JavaScript needs to be enabled in Settings</h1></noscript>
     <meta charset="utf-8">
     <meta name="author" content="mahmoud hennawi">
@@ -11,11 +15,16 @@
     <meta name="keywords" content="JavaScript, Console">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <html>
+
+
+
     <title>I'm Learning Javacript</title>
 
     <style>
-
-      div {border: thin solid blue;}
+      /* formatted like Processing-Java or JavaScript (multi-line only)
+      /* Comments can go here */
+      div {border: thin dotted red;}
     </style>
 
   </head>
@@ -25,28 +34,24 @@
     <header><h1>Ordering Grades Assignmnet</h1></header>
     <nav></nav>
     <div>
-      <aside>Notes about this assignment:
-        <ul style="list-style-type:square">
-          <li>65%: ordering numbers, like example
-          <li>80%: ordering four numbers
-          <li>90%: ordering five numbers with different algorithm or code than WHILE & IF from example
-          <li>100%: user input for amount of numbers to be ordered, then ordering correctly
-          <li><font color="black"><strong>BOUNS: finding 3 measures of central tendancy after numbers ordered, outputted to console and inner HTML (mean, median, and mode)</strong></font>
-          <li>BOUNS: user input to choose smallest to largest or largest to smallest
         </ul>
       </aside>
     </div>
 
     <section>
       <article>
-
+        <!--  -->
         <form action="x.html" method="post" onsubmit="event.preventDefault();">
-
+        <!-- Ensures this FORM doesn't work with PHP or other server side scripting
+        languages-->
 
         <p>&nbsp;</p>
-
+        <!-- See: https://www.w3schools.com/html/html_entities.asp-->
+        <!-- Non-breaking real space, adds real space to webpage that is not
+        eliminated by browser (hard coded space)-->
 
         <a><strong>Enter three random grades below, to be ordered smallest to largest ...</strong></a>
+        <!-- Using a prompt command enables alert to enter grades, as many as possible -->
 
         <p>
           <label for="textfield">Grade #1: </label>
@@ -65,17 +70,29 @@
           <input name="textfield3" type="text" id="textfield3">
             <a id="validityTest3">See the Alert</a>
         </p>
+        <p>
+          <label for="textfield">Grade #5: </label>
+          <input name="textfield4" type="text" id="textfield4">
+            <a id="validityTest4">See the Alert</a>
+        </p>
+        <p>
+          <label for="textfield">Grade #5: </label>
+          <input name="textfield5" type="text" id="textfield5">
+            <a id="validityTest5">See the Alert</a>
+        </p>
 
-
+        <!-- Submit Button -->
         <br>
         <button type="button" onclick="main()">Submit</button>
         <br>
         <h3><a id="answer">What is the answer?</a></h3>
         <br><br>
 
-
+        <!-- Exemplar illstrating what this page does -->
+        <!-- Future: make this illustrative of the example to understand the problem -->
+        <fieldset>
           <legend>Case Study</legend>
-
+          <p>Check these out!</p>
           <div>
             <button type="button" onclick="checkboxes()">Submit</button>
             <br><br>
@@ -104,10 +121,11 @@
 
   </body>
 
-  <footer>
-    <blockquote cite=https://en.wikipedia.org/wiki/Leonardo_da_Vinci">
-    <!--  Date Accessed: 20180920 -->
-    <p><strong>"A piece of art is never finished, only abandoned."</strong>
-      <em><a href="https://en.wikipedia.org/wiki/Leonardo_da_Vinci" target="_blank">- Leonardo da Vinci</a></em></p>
+    <footer>
+      <blockquote cite=https://en.wikipedia.org/wiki/Leonardo_da_Vinci">
+      <!--  Date Accessed: 20180920 -->
+      <p><strong>"A piece of art is never finished, only abandoned."</strong>
+        <em><a href="https://en.wikipedia.org/wiki/Leonardo_da_Vinci" target="_blank">- Leonardo da Vinci</a></em></p>
 
-</footer>
+  </footer>
+  </html>
