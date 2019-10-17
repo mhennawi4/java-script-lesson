@@ -1,7 +1,6 @@
 //console.log("Did you change my file name?");
-console.log("You made it to the console!");
+//console.log("You made it to the console!");
 
-//Global Variables
 let stop = false; //NAN Boolean Memory
 
 function testNaN (number) {
@@ -14,30 +13,35 @@ function testNaN (number) {
   }
 }
 
-//Note: this function does not use a WHILE Loop to take any speed limit
-//and calcuate the demerit points and speed where lisence is taken away
-function demeritCalculation (speedLimit, speed) { //Notice these parameters are local and do not mix with "number" variable
-  //Example of Cascading Returns
-  if (speed < speedLimit) return 'Speed is less than the speed limit';
-  if (speed < speedLimit + 1*5) return 'Speed is over speed limit but within grace range, no demerit points';
-  if (speed < speedLimit + 2*5) return '1 demerit point';
-  if (speed < speedLimit + 3*5) return '2 demerit point';
-  if (speed < speedLimit + 4*5) return '3 demerit point';
-  if (speed < speedLimit + 5*5) return '4 demerit point';
-  if (speed < speedLimit + 6*5) return '5 demerit point';
-  if (speed < speedLimit + 7*5) return '6 demerit point';
-  if (speed < speedLimit + 8*5) return '7 demerit point';
-  if (speed < speedLimit + 9*5) return '8 demerit point';
-  if (speed < speedLimit + 10*5) return '9 demerit point';
-  if (speed < speedLimit + 11*5) return '10 demerit point';
-  if (speed < speedLimit + 12*5) return '11 demerit point';
-  if (speed < speedLimit + 13*5) return '12 demerit point';
-  if (speed < speedLimit + 14*5) return '13 demerit point';
-  //Note: to create WHILE Statement, look for number patterns Above
-  //Note: to create FOR Statement, must divide to calculate maximum demerit points (x-1)
-  //Notice only inequlaity has changed below
-  if (speed >= speedLimit + 14*5) return 'You have doubled the speed limit, your license is taken away';
-  return 'Check the Algorithm for errors';
+function orderingThree (first, second, third) { //Notice these parameters are local and do not mix with "number" variable
+  //Memory variable
+  let memory1;
+
+  //If numbers out of order
+  //Use desending sequence to illustrate while loop ... if statements fail without WHILE since double switch required
+  //For example: 70, 60, 50
+  while (first > second || second > third) {
+    if (first > second) {
+      memory1 = second;
+      second = first;
+      first = memory1;
+    }
+    if (second > third) {
+      memory1 = third;
+      third = second;
+      second = memory1;
+    }
+  }
+
+  //Final Check: this checks if numbers are in order
+  //Also checks if numbers are equal and catches if something is wrong
+  if (first <= second) {
+    if (second <= third) {
+      return first + ", " + second + ", " + third;
+    }
+  } else {
+    return "Check program for errors"
+  }
 }
 
 function checkboxes() {
@@ -46,65 +50,69 @@ function checkboxes() {
   checkbox2 = document.getElementById('Checkbox2').checked;
   checkbox3 = document.getElementById('Checkbox3').checked;
   if ( checkbox1 == true ) {
-    document.getElementById('checkbox1_answer').innerHTML = "Speed?";
+    document.getElementById('checkbox1_answer').innerHTML = "False, 50% is less than 60%";
   } else {
     document.getElementById('checkbox1_answer').innerHTML = "Answer?";
   }
   if ( checkbox2 == true ) {
-    document.getElementById('checkbox2_answer').innerHTML = "Speed?";
+    document.getElementById('checkbox2_answer').innerHTML = "False, 70% > 65%";
   } else {
     document.getElementById('checkbox2_answer').innerHTML = "Answer?";
   }
   if ( checkbox3 == true ) {
-    document.getElementById('checkbox3_answer').innerHTML = "Speed?";
+    document.getElementById('checkbox3_answer').innerHTML = "False, these numbers are the same";
   } else {
     document.getElementById('checkbox3_answer').innerHTML = "Answer?";
   }
 }
 
+// This coding illustrates the advanced method
 function main() {
   //console.log("It works");
 
-  let firstNumber, secondNumber;
+  let firstNumber, secondNumber, thirdNumber, fourthNumber, fithNumber;
 
   //Get the Width-value from id=textfield1
   firstNumber = document.getElementById('textfield1').value;
-
-  //IF Statement to autopopulate speed limit and catch errors
-  if (firstNumber == '') {
-    firstNumber = 70;
-  } else if (firstNumber != '') {
-  } else {
-    console.log("Speed Limit errors in .js file, please review");
-  }
   //testNaN (firstNumber);
   document.getElementById('validityTest1').innerHTML = alert ( testNaN (firstNumber));
   document.getElementById('validityTest1').innerHTML = testNaN (firstNumber);
 
   //Get the Height-value from id=textfield2
   secondNumber = document.getElementById('textfield2').value;
-  console.log(secondNumber);
-  if (secondNumber == '') {
-    stop = true;
-    secondNumber = 0;
-  } else if (secondNumber != '') {
-  } else {
-    console.log("Speed for demerit calculation errors in .js file, please review");
-  }
-
   //testNaN (secondNumber);
   document.getElementById('validityTest2').innerHTML = alert ( testNaN (secondNumber));
   document.getElementById('validityTest2').innerHTML = testNaN (secondNumber);
 
+  //Get the Height-value from id=textfield2
+  thirdNumber = document.getElementById('textfield3').value;
+  //testNaN (Third);
+  document.getElementById('validityTest3').innerHTML = alert ( testNaN (thirdNumber));
+  document.getElementById('validityTest3').innerHTML = testNaN (thirdNumber);
+
+  //Get the Height-value from id=textfield2
+  fourthNumber = document.getElementById('textfield4').value;
+  //testNaN (fourth);
+  document.getElementById('validityTest4').innerHTML = alert ( testNaN (fourthNumber));
+  document.getElementById('validityTest4').innerHTML = testNaN (fourthNumber);
+
+  //Get the Height-value from id=textfield2
+  fifthNumber = document.getElementById('textfield5').value;
+  //testNaN (Third);
+  document.getElementById('validityTest5').innerHTML = alert ( testNaN (fifthNumber));
+  document.getElementById('validityTest5').innerHTML = testNaN (fifthNumber);
+
+
   //Illustrates one example of character escapes
-  console.log("In memory, \n the first number is " + firstNumber + " and \n the second number is " + secondNumber);
-  document.getElementById('speedLimit').innerHTML = firstNumber;
-  document.getElementById('speed').innerHTML = secondNumber;
+  console.log("In memory, \n the first number is " + firstNumber + " and \n the second number is " + secondNumber + " and \n the second number is " + thirdNumber);
+
+  //Final Output to inner HTML & Console
 
   if (stop == true) {
-    document.getElementById('answer').innerHTML = "Restart the example, speed limit or speed need to be entered, non-zero, values."
+    document.getElementById('answer').innerHTML = "Restart the example, a width or height needs to be a number."
   } else {
-    console.log("Demerit Calculation is: ", demeritCalculation (firstNumber, secondNumber) );
-    document.getElementById('answer').innerHTML = "Demerit Calculation is: " + demeritCalculation (firstNumber, secondNumber);
+    console.log("The smallest to largest order is ", orderingThree (firstNumber, secondNumber, thirdNumber) );
+    document.getElementById('answer').innerHTML = "The numbers " + firstNumber + ", " + secondNumber + ", " + thirdNumber + " in order from smallest to largets is ... \n" +
+    orderingThree(firstNumber, secondNumber, thirdNumber);
   }
 }
